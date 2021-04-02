@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'api-me',
-    '__version' => '0.0.1',
+    '__version' => '1.0.0',
     '__git' => 'git@github.com:getmim/api-me.git',
     '__license' => 'MIT',
     '__author' => [
@@ -11,6 +11,7 @@ return [
         'website' => 'http://iqbalfn.com/'
     ],
     '__files' => [
+        'app/api-me' => ['install','remove'],
         'modules/api-me' => ['install','update','remove']
     ],
     '__dependencies' => [
@@ -28,7 +29,7 @@ return [
         'classes' => [
             'ApiMe\\Controller' => [
                 'type' => 'file',
-                'base' => 'modules/api-me/controller'
+                'base' => 'app/api-me/controller'
             ]
         ],
         'files' => []
@@ -65,7 +66,7 @@ return [
                     'type' => 'password',
                     'label' => 'Old Password',
                     'rules' => [
-                        'required' => true 
+                        'required' => true
                     ]
                 ],
                 'new' => [
@@ -82,7 +83,7 @@ return [
                     'type' => 'password',
                     'label' => 'Retype Password',
                     'rules' => [
-                        'required' => true 
+                        'required' => true
                     ]
                 ]
             ],
